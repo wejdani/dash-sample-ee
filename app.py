@@ -30,7 +30,6 @@ today=datetime.today().strftime('%d %b, %Y')
 initial_map=folium.Map([24.717, 44.293], zoom_start=5)
 initial_map.save("maps/map.html")
 
-
 tasks_data=pd.read_excel('data/tasks.xlsx')
 tasks_data['Details'] = tasks_data['Details'].apply(ast.literal_eval)
 notes=pd.read_excel('data/notes.xlsx')
@@ -302,14 +301,6 @@ def generate_metric_list_header():
         {"id": "m_header_5", "children": html.Div("نسبة التزام الفرع بالاجراءات")},
         {"id": "m_header_6", "children": "Pass/Fail"},
     )
-
-
-
-
-
-
-
-
 
 
 def generate_metric_row(id, style, col1, col2, col3, col4, col5, col6):
